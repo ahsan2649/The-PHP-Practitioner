@@ -20,7 +20,25 @@
             <li><strong>Name: </strong> <?= $task['title']; ?></li>
             <li><strong>Due Date: </strong> <?= $task['due']; ?></li>
             <li><strong>Person Responsible: </strong> <?= $task['assigned_to']; ?></li>
-            <li><strong>Status: </strong> <?= $task['completed'] ? 'Complete' : 'Incomplete'; ?></li>
+            <li>    
+                <strong>Status: </strong> 
+                <!-- Shorthand if/else, '!' for 'not' -->
+                <?php if($task['completed']): ?>
+                    <span class='icon'>&#9989;</span>
+                <?php else : ?>
+                    <span class='icon'>Incomplete</span>
+                <?php endif; ?>
+
+
+                <?php 
+                // if ($task['completed']) {
+                //     echo '<span class="icon">&#9989</span>';
+                // }
+                // else {
+                //     echo 'incomplete';
+                // }
+                ?>
+            </li>
             
 
         </ul>
