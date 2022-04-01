@@ -1,5 +1,9 @@
 <?php
 
-$greeting = "Hello, World";
+$names = [
+    'Jeff',
+    'John',
+    'Mary'
+]; // Array
 
-require 'index.view.php'; // Copy all contents here
+require 'index.view.php';

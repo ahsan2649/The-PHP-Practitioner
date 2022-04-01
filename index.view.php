@@ -15,24 +15,19 @@
 </head>
 <body>
 
-    <header>
-        <!--<h1>
-            <?php 
-            
-                // $name = $_GET['name']; # Using super globals
+    <ul>
+        <!-- foreach, echo, endforeach -->
+        <?php foreach ($names as $name) : ?> 
+            <li><?= $name; ?></li>
+        <?php endforeach; ?> 
 
-                // echo "Hello, $name"; #/?name=Ahsan
-            
-            ?>
-             close php using ?> 
-        </h1>-->
-
-        <h1>
-            <?=$greeting;?>
-            <!--Shorthand for echo-->
-        </h1>
-
-    </header>
+        <!-- echo insie foreach -->
+        <?php
+            foreach ($names as $name) {
+                echo "<li>$name</li>";
+            }
+        ?>
+    </ul>
 
 </body>
 </html>
