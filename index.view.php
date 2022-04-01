@@ -15,19 +15,6 @@
 </head>
 <body>
 
-    <ul>
-        <!-- foreach, echo, endforeach -->
-        <?php foreach ($names as $name) : ?> 
-            <li><?= $name; ?></li>
-        <?php endforeach; ?> 
-
-        <!-- echo insie foreach -->
-        <?php
-            foreach ($names as $name) {
-                echo "<li>$name</li>";
-            }
-        ?>
-    </ul>
 
 </body>
 </html>
