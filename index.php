@@ -1,16 +1,9 @@
 <?php
 
-// keep classes in separate files
-require 'Task.php';
+// put all bootstrapping in one file
+$query = require 'bootstrap.php';
 
-// keep functions in a separate file
-require 'functions.php';
-
-$pdo = connectToDb();
-
-$tasks = fetchAllTasks($pdo);
-
-
+$tasks = $query->selectAll('todos');
 
 // keep all views in a separate file
 require 'index.view.php'; 
