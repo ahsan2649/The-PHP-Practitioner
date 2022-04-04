@@ -3,11 +3,16 @@
 class Connection{
     // static functions are called through class
     // Connection::make();
-    public static function make(){
+    public static function make($config){
         // try catch for exception
         try {
             // PDO for accessing database
-            return $pdo = new PDO('mysql:host=127.0.0.1;dbname=mytodo', 'root', '2649');
+            return new PDO(
+                $config['connection'].';dbname='.$config['name'],
+                $config['username'],
+                $config['password'],
+                $config['options']
+            );
         } catch (PDOException $e) {
             die($e->getMessage());
         }
