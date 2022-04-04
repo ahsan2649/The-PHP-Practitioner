@@ -2,8 +2,6 @@
 
 $app = [];
 
-
-
 // config in separate file
 $app['config'] = require 'config.php';
 
