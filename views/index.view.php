@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-    <nav>
-        <li><a href="/about">About Us</a></li>
-        <li><a href="/contact">Contact Us</a></li>
-    </nav>
+<?php require("partials/head.php");?>
     <h1>My Tasks</h1>
     <?php foreach($tasks as $task): ?>
         <?php if($task-> completed) : ?>
@@ -19,5 +9,4 @@
             
         <?php endif; ?>
     <?php endforeach?>
-</body>
-</html>
+<?php require('partials/footer.php');?>
