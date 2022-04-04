@@ -1,9 +1,7 @@
 <?php
 
 // put all bootstrapping in one file
-$database = require 'bootstrap.php';
+require 'core/bootstrap.php';
 
-$tasks = $database->selectAll('todos');
-
-// keep all views in a separate file
-require 'index.view.php'; 
+require Router::load('routes.php')
+    ->direct(Request::uri());
