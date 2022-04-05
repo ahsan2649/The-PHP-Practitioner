@@ -1,11 +1,10 @@
 <?php
 
-$app = [];
-
-// config in separate file
-$app['config'] = require 'config.php';
-$app['database'] = new QueryBuilder(
+App::bind('config', require 'config.php');
+App::bind('database', new QueryBuilder(
     Connection::make(
-        $app['config']['database']
+        App::get('config')['database']
     )
-);
+));
+
+
