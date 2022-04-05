@@ -1,5 +1,6 @@
 <?php
 
+// composer install
 // require autoloader for composer
 require 'vendor/autoload.php';
 
