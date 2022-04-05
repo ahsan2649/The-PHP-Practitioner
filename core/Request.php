@@ -2,6 +2,8 @@
 
 namespace App\Core;
 
+
+// Determine URI's and Request Methods
 class Request{
 
     public static function uri(){

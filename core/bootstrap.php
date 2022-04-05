@@ -1,5 +1,7 @@
 <?php
 
+// Set up all required dependencies
+
 use App\Core\App;
 
 App::bind('config', require 'config.php');

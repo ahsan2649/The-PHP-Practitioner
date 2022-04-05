@@ -7,6 +7,7 @@ require 'vendor/autoload.php';
 // put all bootstrapping in one file
 require 'core/bootstrap.php';
 
+// import Router and Request
 use App\Core\{Router, Request};
 
 

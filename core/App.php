@@ -2,6 +2,7 @@
 
 namespace App\Core;
 
+// Keep all dependencies in one class
 class App{
     protected static $registry = [];
 
