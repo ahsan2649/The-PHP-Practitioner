@@ -9,7 +9,7 @@ class App{
 
     public static function get($key){
         if(!array_key_exists($key, static::$registry)){
-            throw new Exception;
+            throw new Exception();
         }
 
         return static::$registry[$key];
